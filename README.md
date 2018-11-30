@@ -14,9 +14,7 @@ It can be used standalone or with [CCapture.js](https://github.com/spite/ccaptur
 
 The server is now running.
 
-To see it in work, go to "http://localhost:8080/test.html". You should see some frames rendered, then a link will
-be provided to download the video. Or you can get the video in the `output` folder. There's a three.js sample in
-"http://localhost:8080/test2.html".
+To see it in work, go to "http://localhost:8080/test3.html"
 
 ## To use it make sure u include the following files in your js project
 
