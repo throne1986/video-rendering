@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html> 
-  <head>
-    <style>
+<html>
+<head>
+	<title>TweenJS: Simple Tween Demo</title>
+<style>
 
-      canvas {
-          border: 1px solid black;
+canvas {
+          border: 1px solid #08bf31;
           justify-content: center;
           display: flex;
           align-items: center;
           margin: 0px auto;
+          margin-bottom: 40px;
       }
 
       a {
@@ -20,6 +22,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 300px;
+        color: white;
       }
       #container{
         flex-direction: column;
@@ -40,17 +43,25 @@
         border: none;
         border-radius: 300px;
     }
-    </style>
-  </head>
-  <body>
-    <div id="container">
-        <button id="preview">preview</button>
-        <div id="progress"></div>
-    </div>
 
-  </body>
-  <script src="http://localhost:8081/ffmpegserver/CCapture.js"></script>
-  <script src="http://localhost:8081/ffmpegserver/ffmpegserver.js"></script>
-  <script src="3rdparty/three.min.js"></script>
-  <script src="test2.js"></script>
+
+</style>
+
+</head>
+<body onload="init();">
+
+<div>
+
+<div id="container">
+        <h1>Simple Tween Demo</h1>
+    <canvas id="testCanvas" width="500" height="400"></canvas>
+    <div id="progress"></div>
+</div>
+</div>
+<script src="http://localhost:8081/ffmpegserver/CCapture.js"></script>
+<script src="http://localhost:8081/ffmpegserver/ffmpegserver.js"></script>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.js"></script>
+<script src="test3.js"></script>
+</body>
 </html>

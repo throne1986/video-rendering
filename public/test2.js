@@ -28,7 +28,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-(function() {
+function preview() {
   "use strict";
 
   var framesPerSecond = 60;
@@ -53,8 +53,9 @@
       filename = filename.substr(slashNdx + 1);
     }
     a.download = filename;
-    a.appendChild(document.createTextNode(url + size));
-    document.body.insertBefore(a, progressElem);
+    a.appendChild(document.createTextNode("Download"));
+    var container = document.getElementById("container").insertBefore(a, progressElem);
+
   }
 
   var capturer = new CCapture( {
@@ -105,7 +106,7 @@
 
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     container.appendChild( renderer.domElement );
-    renderer.setSize( 1280, 720, false );
+    renderer.setSize( 500, 500, false );
   }
 
   function createCubeScene( wireframe ) {
@@ -228,5 +229,8 @@
     }
   }
 
-}());
+}
+
+var videoPreview = document.getElementById("preview");
+videoPreview.addEventListener("click", preview);
 
